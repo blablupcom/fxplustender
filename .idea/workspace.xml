@@ -4,6 +4,7 @@
     <list default="true" id="e5c8fad0-b44c-4111-a3b7-d5963ab69219" name="Default" comment="" />
     <ignored path="fxplustenders.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

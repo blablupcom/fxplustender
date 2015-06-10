@@ -226,6 +226,7 @@ if __name__ == '__main__':
                 #contact_email = get_text_text(tender_soup, "dt","Email Address:","dd");
 
                 email_address = ""
+                contact_email = ""
                 try:
                     contact_email = tender_soup.find("dt",text="Email Address:").findNext("dd").findNext("a").contents[0]
                 except:
@@ -244,7 +245,7 @@ if __name__ == '__main__':
                 attach_list = []
                 attach_list = get_attachments(tender_soup)
            
-                scraperwiki.sqlite.save(unique_keys=['l'], data={"l": unicode(link), "tender_id": unicode(tender_id), "buyer": unicode(buyer), "title" : unicode(title), "summary": summary.decode('utf-8'), "categories": unicode(categories), "contact_name": unicode(contact_name), "contact_phone": contact_phone, })
+                scraperwiki.sqlite.save(unique_keys=['l'], data={"l": unicode(link), "tender_id": unicode(tender_id), "buyer": unicode(buyer), "title" : unicode(title), "summary": summary.decode('utf-8'), "categories": unicode(categories), "contact_name": unicode(contact_name), "contact_phone": contact_phone, "contact_email": contact_email,})
                #  "contact_email": contact_email, "contact_addr": contact_addr, "contract_start": contract_start, "contract_end": contract_end, "eoi_start": eoi_start, "eoi_end": eoi_end, "est_value": est_value, "contract_duration": contract_duration,"extension_duration": extension_duration, "extension_iterations": extension_iterations, "attach_list": unicode(attach_list), "d": todays_date })
                # csv_row = [link, tender_id,buyer,title,summary,categories,contact_name,contact_phone,contact_email,contact_addr,contract_start,contract_end,eoi_start,eoi_end,est_value,contract_duration,extension_duration,extension_iterations,attach_list]
 

@@ -1,4 +1,3 @@
- # -*- coding: utf-8 -*-
 import scraperwiki
 from datetime import datetime
 import urllib

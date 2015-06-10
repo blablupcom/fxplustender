@@ -1,4 +1,5 @@
  # -*- coding: utf-8 -*-
+import scraperwiki
 from datetime import datetime
 import urllib
 #import BeautifulSoup
@@ -7,7 +8,7 @@ from bs4 import NavigableString
 #import csv
 import time
 #from pandas import read_csv
-import scraperwiki
+
 
 def get_links_list (source_url):
     html = urllib.urlopen(source_url)

@@ -3,7 +3,7 @@ from datetime import datetime
 import urllib
 #import BeautifulSoup
 from bs4 import BeautifulSoup
-#from bs4 import NavigableString
+from bs4 import NavigableString
 #import csv
 import time
 #from pandas import read_csv

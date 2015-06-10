@@ -3,10 +3,10 @@ from datetime import datetime
 import urllib
 #import BeautifulSoup
 from bs4 import BeautifulSoup
-from bs4 import NavigableString
-import csv
+#from bs4 import NavigableString
+#import csv
 import time
-from pandas import read_csv
+#from pandas import read_csv
 import scraperwiki
 
 def get_links_list (source_url):
@@ -242,7 +242,7 @@ if __name__ == '__main__':
 
                 attach_list = []
                 attach_list = get_attachments(tender_soup)
-                scraperwiki.sqlite.save(unique_keys=['l'], data={"l": unicode(link), "tender_id": unicode(tender_id), "buyer": unicode(buyer)})
+                scraperwiki.sqlite.save(unique_keys=['l'], data={"l": unicode(link), "tender_id": unicode(tender_id), "d": todays_date, "buyer": unicode(buyer)})
                # csv_row = [link, tender_id,buyer,title,summary,categories,contact_name,contact_phone,contact_email,contact_addr,contract_start,contract_end,eoi_start,eoi_end,est_value,contract_duration,extension_duration,extension_iterations,attach_list]
 
                # wr = csv.writer(resultFile, quoting=csv.QUOTE_ALL, delimiter=',')

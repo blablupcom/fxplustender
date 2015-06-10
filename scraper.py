@@ -243,8 +243,8 @@ if __name__ == '__main__':
 
                 attach_list = []
                 attach_list = get_attachments(tender_soup)
-                data = {'l': link['href'], "d": todays_date}
-                scraperwiki.sqlite.save(unique_keys=['l'], data=data)
+           
+                scraperwiki.sqlite.save(unique_keys=['l'], data={"l": unicode(link), "tender_id": tender_id, "buyer": buyer, "title" : title, "summary": summary, "categories": categories, "contact_name": contact_name, "contact_phone": contact_phone, "contact_email": contact_email, "contact_addr": contact_addr, "contract_start": contract_start, "contract_end": contract_end, "eoi_start": eoi_start, "eoi_end": eoi_end, "est_value": est_value, "contract_duration": contract_duration,"extension_duration": extension_duration, "extension_iterations":extension_iterations, "attach_list":attach_list, "d": todays_date })
                # csv_row = [link, tender_id,buyer,title,summary,categories,contact_name,contact_phone,contact_email,contact_addr,contract_start,contract_end,eoi_start,eoi_end,est_value,contract_duration,extension_duration,extension_iterations,attach_list]
 
                # wr = csv.writer(resultFile, quoting=csv.QUOTE_ALL, delimiter=',')
